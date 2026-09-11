@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project — DeployX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <span class="logo-mark">D</span>
+            DeployX
+        </a>
+
+        <a href="dashboard.html" class="secondary-button">
+            Dashboard
+        </a>
+
+    </nav>
+
+    <main class="project-page">
+
+        <div class="project-header">
+
+            <div>
+                <p class="eyebrow">DEPLOYMENT</p>
+
+                <h1 id="projectTitle">
+                    Project
+                </h1>
+
+                <div class="live-url">
+                    <span class="pulse-dot"></span>
+                    <span id="projectUrl"></span>
+                </div>
+            </div>
+
+            <a
+                id="previewButton"
+                class="primary-button"
+                href="#"
+                target="_blank"
+            >
+                Open preview ↗
+            </a>
+
+        </div>
+
+        <section class="project-grid">
+
+            <div class="preview-card">
+
+                <div class="preview-top">
+                    <span>LIVE PREVIEW</span>
+
+                    <span class="status-pill">
+                        ● LIVE
+                    </span>
+                </div>
+
+                <iframe
+                    id="previewFrame"
+                    title="Website Preview"
+                ></iframe>
+
+            </div>
+
+            <aside class="deployment-details">
+
+                <h2>Deployment details</h2>
+
+                <div class="detail">
+                    <span>Status</span>
+                    <strong class="online">Ready</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Platform</span>
+                    <strong>DeployX</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Type</span>
+                    <strong>Static Site</strong>
+                </div>
+
+                <div class="detail">
+                    <span>Engine</span>
+                    <strong>Browser Runtime</strong>
+                </div>
+
+                <button
+                    id="deleteProject"
+                    class="danger-button"
+                >
+                    Delete project
+                </button>
+
+            </aside>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

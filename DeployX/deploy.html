@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy — DeployX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-mark">D</span>
+            DeployX
+        </a>
+
+        <a href="dashboard.html" class="secondary-button">
+            Dashboard
+        </a>
+    </nav>
+
+    <main class="deploy-page">
+
+        <div class="deploy-heading">
+            <p class="eyebrow">NEW DEPLOYMENT</p>
+            <h1>Ship something awesome.</h1>
+            <p>
+                Upload a static website ZIP and DeployX will
+                prepare it for preview.
+            </p>
+        </div>
+
+        <section class="deploy-card">
+
+            <div id="dropZone" class="drop-zone">
+
+                <div class="upload-icon">↑</div>
+
+                <h2>Drop your project here</h2>
+
+                <p>
+                    or choose a ZIP file from your computer
+                </p>
+
+                <label class="upload-button">
+                    Choose ZIP
+                    <input
+                        id="fileInput"
+                        type="file"
+                        accept=".zip"
+                        hidden
+                    >
+                </label>
+
+                <small>
+                    Maximum recommended size: 25MB
+                </small>
+
+            </div>
+
+            <div id="fileInfo" class="file-info hidden">
+
+                <div>
+                    <span class="file-icon">▣</span>
+
+                    <div>
+                        <strong id="fileName"></strong>
+                        <span id="fileSize"></span>
+                    </div>
+                </div>
+
+                <button id="removeFile" class="icon-button">
+                    ×
+                </button>
+
+            </div>
+
+            <div class="project-name-field">
+
+                <label for="projectName">
+                    Project name
+                </label>
+
+                <input
+                    id="projectName"
+                    type="text"
+                    placeholder="my-awesome-site"
+                    maxlength="40"
+                >
+
+            </div>
+
+            <button id="deployButton" class="deploy-button">
+                Deploy project →
+            </button>
+
+            <div id="deploymentProgress" class="progress-area hidden">
+
+                <div class="progress-header">
+                    <span id="progressText">
+                        Preparing deployment...
+                    </span>
+
+                    <span id="progressPercent">
+                        0%
+                    </span>
+                </div>
+
+                <div class="progress-track">
+                    <div id="progressBar"></div>
+                </div>
+
+                <div id="deployLogs" class="deploy-logs"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
